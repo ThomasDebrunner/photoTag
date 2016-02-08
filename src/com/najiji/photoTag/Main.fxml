@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.najiji.photoTag.MainController">
+   <children>
+      <VBox layoutX="-64.0" layoutY="-100.0" prefHeight="600.0" prefWidth="400.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="294.0" fitWidth="435.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox prefHeight="57.0" prefWidth="435.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="45.0" prefWidth="268.0" HBox.hgrow="ALWAYS">
+                     <children>
+                     	<Label text="Current Filename:" />
+                     	<Label text="N/A" fx:id="currentFilenameLabel" />
+                        <Label text="New Filename:" />
+                        <TextField fx:id="filenameTextField" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                      	<Label text="Current Date:" />
+                      	<Label text="N/A" fx:id="currentDateLabel"/>
+                        <Label text="New Date:" />
+                        <DatePicker fx:id="datePicker" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <BorderPane prefHeight="37.0" prefWidth="435.0">
+               <left>
+                  <Button fx:id="previousButton" mnemonicParsing="false" onAction="#previousButtonAction" text="&lt; PREVIOUS" BorderPane.alignment="CENTER" />
+               </left>
+               <right>
+                  <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextButtonAction" text="NEXT &gt;" BorderPane.alignment="CENTER" />
+               </right>
+               <center>
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonAction" text="SAVE" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <Button fx:id="openButton" mnemonicParsing="false" onAction="#openButtonAction" text="OPEN DIRECTORY" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
